@@ -3,6 +3,8 @@ Its a streamlit app used to play with pretrained word2vec models and try out dif
 It uses gensim downloader API which extracts this vector directly from their sources.
 List of available models and corpuses can be found here - [Gensim Downloader API](https://github.com/RaRe-Technologies/gensim-data)
 
+![Screenshot](https://github.com/havingfun/WordPlay/blob/master/references/screenshot.png)
+
 ## How to Run
 
 ## With Docker
