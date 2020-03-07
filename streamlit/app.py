@@ -36,7 +36,7 @@ def main():
         word = st.text_input("Enter Word")
         topn = st.number_input("Top N Closest words", 1, 100)
         if word and topn:
-            output = word2vec.similar_by_word(word,topn=topn)
+            output = word2vec.similar_by_word(word.lower(),topn=topn)
             st.dataframe(pd.DataFrame(output, columns=["Word", "Score"]))
             
         st.subheader("Analogy - A:B then C:? - Example - King:Man then Woman:?")
@@ -44,7 +44,7 @@ def main():
         wordB = st.text_input("B")
         wordC = st.text_input("C")
         if wordA and wordB and wordC:
-            output = word2vec.most_similar_cosmul(positive=[wordA, wordC], negative=[wordB])
+            output = word2vec.most_similar_cosmul(positive=[wordA.lower(), wordC.lower()], negative=[wordB.lower()])
             st.dataframe(pd.DataFrame(output, columns=["Word", "Score"]))
         
     
