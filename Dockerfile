@@ -6,12 +6,12 @@ COPY requirements.txt ./requirements.txt
 
 RUN pip install -r requirements.txt
 
-EXPOSE 8503
+EXPOSE 8502
 
 COPY . /app
 
 WORKDIR /app/streamlit
 
-ENTRYPOINT ["streamlit", "run", "--server.port", "8503"]
+ENTRYPOINT ["streamlit", "run"]
 
 CMD ["app.py"]
